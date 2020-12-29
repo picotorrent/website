@@ -1,0 +1,405 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI Light', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+a {
+  color: #179ad7;
+}
+
+h1, h2, h3, h4, h5, h6,
+.btn {
+  font-family: 'Segoe UI SemiBold', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .brand {
+  width: 32px;
+  height: 32px;
+  background: url("../brand/logo.svg") center no-repeat;
+  background-size: 100%;
+  font-size: 0;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.navbar .brand:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: #179ad7;
+  padding: 1rem .75rem;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI SemiBold', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.navbar ul li a:hover {
+  opacity: .65;
+}
+
+.navbar svg {
+  margin-left: .25rem;
+  height: 8px;
+  fill: #179ad7;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
+
+@media (min-width: 756px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.lead {
+  font-size: 115%;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .5rem 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid;
+  color: #FFF;
+  background: -webkit-gradient(linear, left bottom, left top, from(#179ad7), to(#63c5e6));
+  background: linear-gradient(0deg, #179ad7, #63c5e6);
+  font-size: 14px;
+  border-radius: 4px;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.btn:hover {
+  opacity: .85;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.btn path {
+  fill: #FFF;
+}
+
+.btn.white {
+  background: #FFF;
+  color: #179ad7;
+  border-color: white;
+}
+
+.btn.white path {
+  fill: #179ad7;
+}
+
+.btn svg {
+  width: 20px;
+  margin-right: 1rem;
+}
+
+.btn svg path {
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.btn:hover {
+  opacity: .85;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.row .col {
+  padding: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 300px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 1rem;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.social a:hover {
+  opacity: .75;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.social a:last-child {
+  margin-right: 0;
+}
+
+.social a .icon {
+  width: 22px;
+  height: 22px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#007ED3), color-stop(#179ad7), to(#63c5e6));
+  background: linear-gradient(0deg, #007ED3, #179ad7, #63c5e6);
+  position: relative;
+  overflow: hidden;
+  color: #FFF;
+}
+
+main .container {
+  position: relative;
+}
+
+main .container .content {
+  padding: 5rem 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  main .container .content {
+    max-width: 500px;
+    margin: 0;
+  }
+}
+
+main .container .buttons {
+  margin-top: 3rem;
+}
+
+main .container .buttons .btn {
+  margin-bottom: .5rem;
+  margin-right: .75rem;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+main .container .buttons .btn:last-child {
+  margin-right: 0;
+}
+
+main .container .buttons .merch {
+  border: 2px solid #FFF;
+  color: #FFF;
+  background: transparent;
+}
+
+main .container .buttons .merch path {
+  fill: #FFF;
+}
+
+main .container .buttons .merch:hover {
+  background: #FFF;
+  color: #179ad7;
+}
+
+main .container .buttons .merch:hover path {
+  fill: #179ad7;
+}
+
+main .social {
+  margin-top: 4rem;
+}
+
+main .preview {
+  display: none;
+  position: absolute;
+  width: 70vw;
+  max-width: 100%;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(35%, 0);
+          transform: translate(35%, 0);
+  z-index: 0;
+  -webkit-box-shadow: -2rem 2rem 8rem -2rem #005087;
+          box-shadow: -2rem 2rem 8rem -2rem #005087;
+}
+
+@media (min-width: 1200px) {
+  main .preview {
+    display: block;
+  }
+}
+
+@media (min-width: 1800px) {
+  main .preview {
+    width: 57vw;
+    -webkit-transform: translate(25%, 0);
+            transform: translate(25%, 0);
+  }
+}
+
+main .preview.now {
+  width: 45vw;
+  -webkit-transform: translate(-5%, -5%);
+          transform: translate(-5%, -5%);
+}
+
+@media (min-width: 1800px) {
+  main .preview.now {
+    width: 40vw;
+  }
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section svg {
+  width: 64px;
+}
+
+section svg path {
+  fill: #179ad7;
+}
+
+section .row {
+  margin-bottom: 2rem;
+}
+
+section .preview {
+  width: 100%;
+  max-width: 865px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+section .preview.gif {
+  max-width: 650px;
+}
+
+section .caption {
+  display: block;
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
+
+footer {
+  border-top: 1px solid #CCC;
+}
+
+footer .container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .container svg path {
+  fill: #222;
+}
+
+footer .container span {
+  font-size: 85%;
+}
+
+footer .container span .brand {
+  font-family: 'Segoe UI SemiBold', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+}
+
+.index .navbar {
+  padding: 2rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.index .navbar .brand {
+  background: url("../brand/logo-white.svg") center no-repeat;
+}
+
+.index .navbar ul li a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

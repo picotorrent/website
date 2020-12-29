@@ -1,59 +1,78 @@
 <template>
-  <b-card img-src="images/stickers.jpg" img-top>
-    <b-card-title class="text-center">
-      Stickers (5x)
-    </b-card-title>
-
-    <b-card-sub-title class="text-center">
-      Free worldwide shipping
-    </b-card-sub-title>
-
-    <b-card-body>
-      <p>
-        A pack of five (5) cool blue PicoTorrent stickers. Use it on your laptop, car
-        or whatever hardware you want to double the value of!
+  <section>
+    <div class="container">
+      <h2 class="text-center">
+        PicoTorrent merchandise
+      </h2>
+      <p class="lead">
+        If you want to support PicoTorrent and also get cool swag, this is the place.
+        All proceeds from the shop will go towards funding PicoTorrent development.
       </p>
-
-      <p>
-        <em>8cm across.</em>
-      </p>
-
-      <b-row>
-        <b-col cols="12">
-          <b-input-group class="">
-            <template v-slot:append>
-              <b-button variant="outline-dark" :disabled="increaseDisabled" @click="increase">
-                <font-awesome-icon :icon="['fas', 'plus']" />
-              </b-button>
-            </template>
-            <template v-slot:prepend>
-              <b-button variant="outline-dark" :disabled="decreaseDisabled" @click="decrease">
-                <font-awesome-icon :icon="['fas', 'minus']" />
-              </b-button>
-            </template>
-            <b-form-input v-model="stickersCount" type="number" min="1" max="10" class="text-center" />
-          </b-input-group>
-        </b-col>
-        <b-col cols="12">
-          <b-button
-            v-show="stripeLoaded"
-            class="pico-primary mt-3"
-            block
-            variant="primary"
-            :disabled="!checkoutEnabled"
-            @click="checkout"
-          >
+      <div class="card">
+        <img src="/images/stickers.jpg">
+        <div class="content">
+          <h3>Stickers (5x)</h3>
+          <h5>Free worldwide shipping</h5>
+          <p class="lead">
+            A pack of five (5) cool blue PicoTorrent stickers. Use it on your laptop, car
+            or whatever hardware you want to double the value of!
+          </p>
+          <p>
+            <b>Sticker size:</b> <em>8cm across.</em>
+          </p>
+          <div class="row">
+            <div class="col">
+              <button class="btn" :disabled="decreaseDisabled" @click="decrease">
+                <svg viewBox="0 0 448 512">
+                  <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                </svg>
+              </button>
+            </div>
+            <div class="col">
+              <input v-model="stickersCount" type="number" min="1" max="10" class="text-center">
+            </div>
+            <div class="col">
+              <button class="btn" :disabled="increaseDisabled" @click="increase">
+                <svg viewBox="0 0 448 512">
+                  <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button v-show="stripeLoaded" class="btn btn-buy" :disabled="!checkoutEnabled" @click="checkout">
             Buy for €{{ totalPrice }}
-          </b-button>
-        </b-col>
-      </b-row>
-    </b-card-body>
-  </b-card>
+          </button>
+        </div>
+      </div>
+      <p>
+        <small class="text-muted">
+          All payments are processed by <a href="https://stripe.com" target="_blank">Stripe</a>.
+          Prices in EUR. Free shipping by letter (air mail/par avion).
+          <br>
+          A receipt of your purchase will be sent to your e-mail when the order has been confirmed.
+        </small>
+      </p>
+    </div>
+    <!-- Modal -->
+    <div ref="success-modal" class="modal">
+      <h3>We ❤️ you!</h3>
+      <p>
+        Thank you for your purchase! We will dispatch trained monkeys to pack and ship
+        your order as soon as possible.
+      </p>
+
+      <p>
+        An email receipt will be sent to you as soon as the order is confirmed.
+      </p>
+      <button class="btn" to="/">
+        Go back to PicoTorrent.org
+      </button>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  layout: 'shop',
   data () {
     return {
       stripeCheckoutLoading: false,
@@ -77,6 +96,11 @@ export default {
     },
     totalPrice () {
       return this.stickersPrice * this.stickersCount;
+    }
+  },
+  mounted () {
+    if ('success' in this.$route.query) {
+      this.$refs['success-modal'].show();
     }
   },
   methods: {
@@ -118,6 +142,9 @@ export default {
   },
   head () {
     return {
+      bodyAttrs: {
+        class: 'page-shop'
+      },
       script: [
         {
           hid: 'stripe',
@@ -130,17 +157,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.pico-primary, .pico-primary:active {
-  background-color: #35b1e1;
-  border: 0;
-  color: #fff;
-  font-weight: 700;
-}
-
-.pico-primary:hover, .pico-primary:active, .pico-primary:focus {
-  background-color: #35b1e1;
-  outline: none !important;
-}
-</style>

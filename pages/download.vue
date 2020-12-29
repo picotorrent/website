@@ -1,29 +1,16 @@
 <template>
-  <div>
-    <b-row>
-      <b-col class="mb-3 text-center text-sm-left">
-        <h2>PicoTorrent v{{ release.version }}</h2>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        <ul id="assets">
-          <li v-for="asset in release.assets" :key="asset.url">
-            <a :href="asset.url">{{ asset.name }}</a>
-          </li>
-        </ul>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        <h3>Release notes</h3>
-        <div class="mt-3">
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <span v-html="release.notes" />
-        </div>
-      </b-col>
-    </b-row>
-  </div>
+  <section>
+    <div class="container">
+      <h2>PicoTorrent v{{ release.version }}</h2>
+      <p>Get the latest release, select your desired file:</p>
+      <div class="files">
+        <a v-for="asset in release.assets" :key="asset.url" class="file" :href="asset.url">{{ asset.name }}</a>
+      </div>
+      <h3>Release notes</h3>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <div class="notes" v-html="release.notes" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -36,6 +23,11 @@ export default {
     return {
       release: {}
     };
+  },
+  head: {
+    bodyAttrs: {
+      class: 'page-download'
+    }
   }
 };
 </script>

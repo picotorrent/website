@@ -1,124 +1,119 @@
 <template>
   <div>
-    <b-row>
-      <b-col class="mb-3 text-center text-sm-left">
-        <h2>PicoTorrent is a BitTorrent client</h2>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col cols="12" sm="8" order="2" order-sm="1" class="pr-3 text-center text-sm-left mt-3 mt-sm-0">
-        <p>PicoTorrent is designed to be a friendly BitTorrent client for Windows with high performance and low memory usage.</p>
-        <h3>At a glance</h3>
-        <ul>
-          <li>Strong encryption with support for tunneling via I2P, SOCKS4, SOCKS5 and HTTP(S)</li>
-          <li>Works with both IPv4 and IPv6</li>
-          <li>Multi-lingual user interface</li>
-          <li>Free, open source, with a great community</li>
-        </ul>
-      </b-col>
-      <b-col cols="12" sm="4" order="1" order-sm="2" class="text-center text-sm-left">
-        <img id="logo" src="images/logo.png" width="256" height="256">
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col class="mt-2">
-        <b-button to="/download" class="d-block d-sm-inline-block pico-btn dl mr-0 mr-sm-2 mb-3 mb-sm-0">
-          <font-awesome-icon :icon="['fas', 'download']" />
-          Download PicoTorrent
-        </b-button>
-
-        <b-button to="/shop" class="d-block d-sm-inline-block pico-btn merch">
-          <font-awesome-icon :icon="['fas', 'heart']" />
-          Buy merch
-        </b-button>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col class="my-3">
-        <hr class="separator">
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col cols="12" class="text-center">
-        <img src="/images/screenshot1.png" width="614" class="screenshot">
-      </b-col>
-
-      <b-col cols="12 mt-4">
-        <b-row>
-          <b-col cols="12" sm="6">
-            <feature awesome-icon="window-maximize">
-              <h5>Native look and feel</h5>
-              <p>PicoTorrent is built directly on the Windows APIs and will look native on all supported Windows platforms.</p>
-            </feature>
-          </b-col>
-
-          <b-col cols="12" sm="6" class="mt-3 mt-sm-0">
-            <feature awesome-icon="lock">
-              <h5>Privacy oriented</h5>
-              <p>Setting up a proxy connection is easy. PicoTorrent supports I2P, SOCKS4, SOCKS5 and HTTP(S) proxies as well as strong encryption.</p>
-            </feature>
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
+    <main>
+      <img src="/img/preview-now.png" alt="PicoTorrent Preview" class="preview now">
+      <div class="container">
+        <div class="content">
+          <h1>PicoTorrent is a spicy and minimal BitTorrent client</h1>
+          <p class="lead">
+            Designed to be a friendly and tiny BitTorrent client for Windows with high performance and low memory usage with a native user interface.
+          </p>
+          <div class="glance">
+            <h3>At a glance</h3>
+            <ul>
+              <li>Strong encryption with support for tunneling via I2P, SOCKS4, SOCKS5 and HTTP(S)</li>
+              <li>Works with both IPv4 and IPv6</li>
+              <li>Multi-lingual user interface</li>
+              <li>Free, open source, with a great community</li>
+            </ul>
+          </div>
+          <div class="buttons">
+            <a href="/download" target="_self" class="btn white dl">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path d="M15.2443 16.4976C15.6586 16.4976 15.9943 16.8334 15.9943 17.2476C15.9943 17.6273 15.7122 17.9411 15.3461 17.9907L15.2443 17.9976H4.74969C4.33548 17.9976 3.99969 17.6618 3.99969 17.2476C3.99969 16.8679 4.28185 16.5541 4.64792 16.5044L4.74969 16.4976H15.2443ZM10.0033 1.99939C10.383 1.99939 10.6968 2.28154 10.7465 2.64762L10.7533 2.74939L10.7527 12.9424L13.7189 9.97181C13.9849 9.7053 14.4016 9.68071 14.6954 9.89829L14.7796 9.97083C15.0461 10.2369 15.0707 10.6535 14.8531 10.9473L14.7806 11.0315L10.5377 15.2821L10.4671 15.3446L10.3761 15.4032L10.3397 15.4244L10.2485 15.4623L10.128 15.4924L10.0588 15.5003L9.9987 15.5023C9.94858 15.5023 9.8977 15.4968 9.84798 15.4862L9.7671 15.4631C9.67109 15.4321 9.58398 15.3818 9.50983 15.3171L5.22025 11.0324C4.92715 10.7397 4.92682 10.2648 5.2195 9.9717C5.48558 9.70524 5.90222 9.68074 6.19599 9.89838L6.28016 9.97094L9.2527 12.9384L9.25332 2.74939C9.25332 2.33518 9.58911 1.99939 10.0033 1.99939Z" />
+              </svg>
+              Download PicoTorrent
+            </a>
+            <a href="https://discord.gg/A52dWUwS" class="btn outline">
+              <svg class="icon" viewBox="0 0 245 240">
+                <path fill="#FFF" d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z" />
+                <path fill="#FFF" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" />
+              </svg>
+              Join us in Discord
+            </a>
+            <!--
+            <a href="/shop" target="_self" class="btn white outline">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path d="M10.4965 16.8028L16.7408 10.4994C18.4252 8.78856 18.4199 6.02549 16.7239 4.31249C15.0611 2.63292 12.3961 2.5895 10.6978 4.19086C10.6612 4.22539 10.6251 4.26068 10.5894 4.29673L9.99299 4.90026L9.38843 4.28963C9.35529 4.25616 9.32175 4.22333 9.28783 4.19116C7.58595 2.57726 4.91654 2.60193 3.26122 4.2739C1.5729 5.9792 1.58114 8.75004 3.27679 10.4627L9.55368 16.8028C9.81404 17.0657 10.2362 17.0657 10.4965 16.8028ZM11.3 5.00029C12.5964 3.69135 14.7025 3.69204 16.0133 5.01604C17.3253 6.34123 17.3272 8.47734 16.0292 9.79681L16.0282 9.79783L10.0252 15.8577L3.98743 9.75919C2.67408 8.43263 2.67286 6.28953 3.97185 4.97746C5.26525 3.67106 7.36984 3.67208 8.6778 4.99319L9.63801 5.96306C9.8338 6.16082 10.1534 6.16067 10.349 5.96272L11.3 5.00029Z" />
+              </svg>
+              Buy merch
+            </a>
+            -->
+          </div>
+          <div class="social">
+            <a href="https://github.com/picotorrent">
+              <svg class="icon" viewBox="0 0 16 16">
+                <path fill="#FFF" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com/picotorrent">
+              <svg class="icon" viewBox="0 0 16 16">
+                <path fill="#FFF" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z" />
+              </svg>
+            </a>
+            <!--
+            <a href="https://discord.gg/A52dWUwS">
+              <svg class="icon" viewBox="0 0 245 240">
+                <path fill="#FFF" d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z" />
+                <path fill="#FFF" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" />
+              </svg>
+            </a>
+            -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="container">
+        <h2>Check out our features</h2>
+        <div class="row">
+          <div class="col">
+            <svg viewBox="0 0 20 20">
+              <path d="M2.99707 5.5C2.99707 4.11929 4.11636 3 5.49707 3H14.4971C15.8778 3 16.9971 4.11929 16.9971 5.5V6H17V7H16.9971V14.5C16.9971 15.8807 15.8778 17 14.4971 17H5.49707C4.11636 17 2.99707 15.8807 2.99707 14.5V5.5ZM15.9971 6V5.5C15.9971 4.67157 15.3255 4 14.4971 4H5.49707C4.66864 4 3.99707 4.67157 3.99707 5.5V6H15.9971ZM3.99707 7V14.5C3.99707 15.3284 4.66864 16 5.49707 16H14.4971C15.3255 16 15.9971 15.3284 15.9971 14.5V7H3.99707Z" />
+            </svg>
+            <h3>Native look and feel</h3>
+            <p>
+              PicoTorrent is built directly on the Windows APIs and will look native on all supported Windows platforms.
+            </p>
+          </div>
+          <div class="col">
+            <svg viewBox="0 0 48 48">
+              <path d="M12 12.5V16H8.75C6.12665 16 4 18.1266 4 20.75V39.25C4 41.8734 6.12665 44 8.75 44H31.25C31.4394 44 31.6262 43.9889 31.8097 43.9674C31.3937 43.6608 30.9589 43.312 30.5224 42.9192C30.0608 42.504 29.5893 42.0312 29.1334 41.5H8.75C7.50736 41.5 6.5 40.4926 6.5 39.25V20.75C6.5 19.5074 7.50736 18.5 8.75 18.5H31.25C32.4926 18.5 33.5 19.5074 33.5 20.75V23.284C33.627 23.1734 33.7388 23.073 33.8296 22.9901C33.908 22.9184 33.9691 22.8613 34.0089 22.8237L34.0516 22.7831L34.0589 22.7761C34.5989 22.2523 35.3004 21.9935 36 22.0001V20.75C36 18.1266 33.8734 16 31.25 16H28V12.5C28 8.08172 24.4183 4.5 20 4.5C15.5817 4.5 12 8.08172 12 12.5ZM20 7C23.0376 7 25.5 9.46243 25.5 12.5V16H14.5V12.5C14.5 9.46243 16.9624 7 20 7Z" />
+              <path d="M23 30C23 31.6569 21.6569 33 20 33C18.3431 33 17 31.6569 17 30C17 28.3431 18.3431 27 20 27C21.6569 27 23 28.3431 23 30Z" />
+              <path d="M28 27.76V33.5002C28 39.9828 34.3142 43.2978 35.7224 43.9565C35.901 44.04 36.0963 44.0401 36.275 43.9569C37.6839 43.301 44 40.0095 44 33.7125V27.7597C44 27.3411 43.6582 27.0032 43.2398 26.9889C42.2779 26.956 40.6126 26.8348 39.4986 26.4002C38.4628 25.996 37.2657 24.9301 36.5745 24.2553C36.2586 23.9469 35.7412 23.9468 35.4252 24.255C34.7333 24.9297 33.5352 25.9959 32.5002 26.4002C31.3868 26.8351 29.722 26.9562 28.7603 26.989C28.3419 27.0033 28 27.3413 28 27.76Z" />
+            </svg>
+            <h3>Privacy oriented</h3>
+            <p>
+              Setting up a proxy connection is easy. PicoTorrent supports I2P, SOCKS4, SOCKS5 and HTTP(S) proxies as well as strong encryption.
+            </p>
+          </div>
+          <div class="col">
+            <svg viewBox="0 0 28 28">
+              <path d="M12.7502 2C12.336 2 12.0002 2.33579 12.0002 2.75C12.0002 3.16421 12.336 3.5 12.7502 3.5H18.5002V6.30519C18.5002 8.0543 16.7512 9.5 14.7502 9.5C14.336 9.5 14.0002 9.83579 14.0002 10.25C14.0002 10.6642 14.336 11 14.7502 11C17.3137 11 20.0002 9.12567 20.0002 6.30519V2.75C20.0002 2.33579 19.6644 2 19.2502 2H12.7502Z" />
+              <path d="M10.693 7.46282C10.5769 7.18263 10.3034 6.99997 10.0001 7C9.69682 7.00003 9.42339 7.18274 9.3073 7.46295L2.0573 24.963C1.89877 25.3457 2.08047 25.7844 2.46314 25.943C2.84582 26.1015 3.28455 25.9198 3.44309 25.5371L5.53071 20.498H14.4725L16.5613 25.5373C16.7199 25.9199 17.1587 26.1015 17.5413 25.9429C17.9239 25.7843 18.1056 25.3455 17.947 24.9629L15.7434 19.6469C15.7257 19.5153 15.6739 19.3946 15.5971 19.2938L10.693 7.46282ZM13.8507 18.998H6.15214L10.0004 9.70911L13.8507 18.998Z" />
+              <path d="M22.2518 2C22.666 2 23.0018 2.33579 23.0018 2.75V8.5H25.2502C25.6644 8.5 26.0002 8.83579 26.0002 9.25C26.0002 9.66421 25.6644 10 25.2502 10H23.0018V19.2495C23.0018 19.6637 22.666 19.9995 22.2518 19.9995C21.8376 19.9995 21.5018 19.6637 21.5018 19.2495V9.29918C21.5007 9.28292 21.5002 9.26652 21.5002 9.25C21.5002 9.23348 21.5007 9.21708 21.5018 9.20082V2.75C21.5018 2.33579 21.8376 2 22.2518 2Z" />
+            </svg>
+            <h3>Custom Query Language</h3>
+            <p>
+              PicoTorrent ships with an embedded query language (called <a href="https://docs.picotorrent.org/en/master/pql.html" target="_blank">PQL</a>) which makes it possible to filter the torrent list view in order to quickly show relevant information.
+            </p>
+          </div>
+        </div>
+        <img src="/img/preview-now-2.gif" alt="PicoTorrent AMP" class="preview gif">
+        <small class="caption">PicoTorrent Query Language (PQL) in action to filter your spicy torrents</small>
+        <img src="/img/preview-now-3.gif" alt="PicoTorrent Progressbar" class="preview gif">
+        <small class="caption">See the progress of your files at a glance</small>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Feature from '@/components/Feature';
-
 export default {
-  components: { Feature }
+  head: {
+    bodyAttrs: {
+      class: 'page-index'
+    }
+  }
 };
 </script>
-
-<style>
-#logo {
-  height: auto;
-  max-width: 100%;
-}
-
-.pico-btn {
-  border-radius: 5px;
-  font-weight: 700;
-  padding: 10px 25px;
-}
-
-a.dl, a.dl:active {
-  background-color: #35b1e1;
-  border: 0;
-  color: #fff;
-  font-weight: 700;
-}
-
-a.dl:hover, a.dl:active, a.dl:focus {
-  background-color: #35b1e1;
-  outline: none !important;
-  text-decoration: underline;
-}
-
-a.merch {
-  background-color: transparent;
-  border-color: #35b1e1;
-  border-style: dashed;
-  border-width: thin;
-  color: #35b1e1;
-}
-
-a.merch:hover {
-  background-color: transparent;
-  text-decoration: underline;
-  color: #35b1e1;
-  border-color: #35b1e1;
-}
-
-hr.separator {
-  border: 0;
-  border-top: 1px dashed #ccc;
-}
-
-.screenshot {
-  height: auto;
-  max-width: 100%;
-}
-</style>
