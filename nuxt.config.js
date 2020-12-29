@@ -36,6 +36,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/static/css/style.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -55,17 +56,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    ['nuxt-fontawesome', {
-      imports: [
-        {
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faDownload', 'faHeart', 'faPlus', 'faMinus', 'faExternalLinkAlt', 'faLock', 'faWindowMaximize']
-        }
-      ]
-    }],
     '@nuxtjs/redirect-module',
-    '@nuxtjs/proxy',
-    'bootstrap-vue/nuxt'
+    '@nuxtjs/proxy'
   ],
   /*
   ** Axios module configuration
