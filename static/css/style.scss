@@ -46,7 +46,7 @@ img {
 
 // Navbar
 .navbar {
-  padding: 1rem 0;
+  padding: 2rem 0;
   // Cotainer
   .container {
     display        : flex;
@@ -114,15 +114,15 @@ img {
 
 .btn {
   display        : inline-flex;
-  padding        : .5rem 1.5rem;
-  font-weight    : 500;
-  text-decoration: none;
-  border         : 2px solid $blue;
-  color          : white;
+  padding        : 0.5rem 1.5rem;
   background     : $blue;
-  font-size      : 14px;
+  border         : 2px solid $blue;
   border-radius  : 4px;
-  transition     : background .35s ease, transform .35s ease;
+  color          : white;
+  font-weight    : 500;
+  font-size      : 14px;
+  text-decoration: none;
+  transition     : background-color .35s ease, border-color .35s ease, transform .35s ease;
   svg {
     width       : 20px;
     margin-right: 1rem;
@@ -174,8 +174,8 @@ img {
   flex-wrap: wrap;
   margin   : 0 -1rem;
   .col {
-    padding  : 1rem;
-    flex     : 1;
+    padding: 1rem;
+    flex   : 1;
   }
 }
 
@@ -214,7 +214,7 @@ main {
   .container {
     position: relative;
     .content {
-      padding  : 5rem 0;
+      padding  : 6rem 0 3rem;
       width    : 100%;
       max-width: 100%;
       margin   : 0 auto;
@@ -228,7 +228,11 @@ main {
       .btn {
         margin-bottom: .5rem;
         margin-right : .75rem;
-        transition   : all .35s ease;
+        transition   : all .35s ease;        
+        @media (max-width: 485px) {
+          width          : 100%;
+          justify-content: center;
+        }
         &:last-child {
           margin-right: 0;  
         }
@@ -237,7 +241,7 @@ main {
   }
 
   .social {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   .preview {
@@ -304,7 +308,7 @@ main {
 
 // Section
 section {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
   svg {
     width: 64px;
     path {
@@ -366,7 +370,6 @@ footer {
 .page-index {
   // Navbar
   .navbar {
-    padding : 2rem 0;
     position: absolute;
     top     : 0;
     left    : 0;
@@ -394,6 +397,10 @@ footer {
     .col {
       min-width: 300px;
     }
+  }
+  // Section
+  section {
+    padding: 3rem 0;
   }
 }
 
@@ -450,7 +457,7 @@ footer {
     }    
   }
   img {
-    display: block;
+    display   : block;
     margin    : 2rem auto;
     box-shadow: 0 1rem 2rem -1rem rgba(black, 0.25);
   }
