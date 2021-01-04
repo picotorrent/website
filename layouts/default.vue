@@ -2,12 +2,12 @@
   <div>
     <nav class="navbar">
       <div class="container">
-        <a href="/" target="_self" class="brand">PicoTorrent</a>
+        <router-link to="/" target="_self" class="brand">PicoTorrent</router-link>
         <ul>
           <li>
-            <a href="/download" target="_self" class="nav-link">
+            <router-link to="/download" target="_self" class="nav-link">
               Download
-            </a>
+            </router-link>
           </li>
           <li>
             <a href="https://picotorrent.blog" rel="noopener" target="_blank" class="nav-link">
@@ -32,7 +32,7 @@
     <footer>
       <div class="container">
         <span>
-          Made with 🌶️ by <a href="https://github.com/picotorrent" target="_self" class="brand">PicoTorrent Community</a>
+          Made with ❤️ and ☕️ by the <a href="https://github.com/picotorrent" target="_self" class="brand">PicoTorrent community</a>
         </span>
         <div class="social">
           <a href="https://github.com/picotorrent">
