@@ -81,6 +81,21 @@ export default {
       stickersCount: 1
     };
   },
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'page-shop'
+      },
+      script: [
+        {
+          hid: 'stripe',
+          src: 'https://js.stripe.com/v3/',
+          defer: true,
+          callback: () => { this.stripeLoaded = true; }
+        }
+      ]
+    };
+  },
   computed: {
     checkoutEnabled () {
       if (this.stripeCheckoutLoading) {
@@ -139,21 +154,6 @@ export default {
       this.stickersCount++;
       if (this.stickersCount > 10) { this.stickersCount = 10; }
     }
-  },
-  head () {
-    return {
-      bodyAttrs: {
-        class: 'page-shop'
-      },
-      script: [
-        {
-          hid: 'stripe',
-          src: 'https://js.stripe.com/v3/',
-          defer: true,
-          callback: () => { this.stripeLoaded = true; }
-        }
-      ]
-    };
   }
 };
 </script>
