@@ -124,8 +124,11 @@ img {
   text-decoration: none;
   transition     : background-color .35s ease, border-color .35s ease, transform .35s ease;
   svg {
-    width       : 20px;
-    margin-right: 1rem;
+    width          : 20px;
+    height         : 20px;
+    margin-right   : 1rem;
+    object-fit     : cover;
+    object-position: center;
     path {
       fill: white;
       transition: fill .35s ease, transform .35s ease;
@@ -310,7 +313,9 @@ main {
 section {
   padding-bottom: 3rem;
   svg {
-    width: 64px;
+    width : 64px;
+    height: 64px;
+    margin-bottom: 1rem;
     path {
       fill: $blue;
     }
