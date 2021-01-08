@@ -16,8 +16,8 @@ jobs:
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: picotorrent/website/peach
+          username: ${{ secrets.UD_DOCKER_REGISTRY_USER }}
+          password: ${{ secrets.UD_DOCKER_REGISTRY_PWD }}
+          registry: ${{ secrets.UD_DOCKER_REGISTRY_URL }}
+          repository: picotorrent/peach
           tag_with_ref: true
