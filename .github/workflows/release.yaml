@@ -39,3 +39,11 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
+
+      - name: Install Octopus Deploy CLI
+        uses: OctopusDeploy/install-octocli@v1
+        with:
+          version: 7.4.2
+
+      - name: Create Octopus release
+        run: octo create-release --project=peach --version=${{ steps.docker_meta.outputs.version }} --packageVersion=${{ steps.docker_meta.outputs.version }} --deployTo=Production --waitForDeployment --progress --server=${{ secrets.UD_OCTOPUS_URL }} --apiKey=${{ secrets.UD_OCTOPUS_API_KEY }}
