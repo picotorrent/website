@@ -1,6 +1,6 @@
 // 
 // PicoTorrent
-// Version: 1.0.0
+// Version: 1.0.1
 //
 @import "bootstrap-reboot.min";
 
@@ -313,8 +313,8 @@ main {
 section {
   padding-bottom: 3rem;
   svg {
-    width : 64px;
-    height: 64px;
+    width        : 64px;
+    height       : 64px;
     margin-bottom: 1rem;
     path {
       fill: $blue;
@@ -361,7 +361,12 @@ footer {
     span {
       font-size: 85%;
       @media (max-width: 768px) {
-        margin-bottom: 0.5rem;
+        flex: 1;
+      }
+      @media (max-width: 500px) {
+        margin-bottom: 1rem;
+        text-align   : center;
+        flex         : 1 1 100%;
       }
       .brand {
         font-family: 'Segoe UI SemiBold', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
