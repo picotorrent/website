@@ -1,14 +1,21 @@
+@import url(d:\Websites\GitHub\PicoTorrent\website\static\css\bootstrap-reboot.min.css);
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI Light', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+  font-family: 'Segoe UI Light', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
   font-size: 16px;
 }
 
 a {
   color: #179ad7;
+  -webkit-transition: color .35s ease;
+  transition: color .35s ease;
+}
+
+a:hover {
+  color: #63c5e6;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -21,7 +28,7 @@ img {
 }
 
 .navbar {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .navbar .container {
@@ -69,7 +76,7 @@ img {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Segoe UI SemiBold', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
+  font-family: 'Segoe UI SemiBold', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
   -webkit-transition: all .35s ease;
   transition: all .35s ease;
 }
@@ -87,10 +94,10 @@ img {
 .container {
   margin: 0 auto;
   padding: 0 1rem;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
-@media (min-width: 756px) {
+@media (min-width: 768px) {
   .container {
     padding: 0 2rem;
   }
@@ -111,32 +118,49 @@ img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: .5rem 1.5rem;
-  font-weight: 500;
-  text-decoration: none;
-  border: 1px solid;
-  color: #FFF;
-  background: -webkit-gradient(linear, left bottom, left top, from(#179ad7), to(#63c5e6));
-  background: linear-gradient(0deg, #179ad7, #63c5e6);
-  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  background: #179ad7;
+  border: 2px solid #179ad7;
   border-radius: 4px;
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transition: background-color .35s ease, border-color .35s ease, -webkit-transform .35s ease;
+  transition: background-color .35s ease, border-color .35s ease, -webkit-transform .35s ease;
+  transition: background-color .35s ease, border-color .35s ease, transform .35s ease;
+  transition: background-color .35s ease, border-color .35s ease, transform .35s ease, -webkit-transform .35s ease;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.btn svg path {
+  fill: white;
+  -webkit-transition: fill .35s ease, -webkit-transform .35s ease;
+  transition: fill .35s ease, -webkit-transform .35s ease;
+  transition: fill .35s ease, transform .35s ease;
+  transition: fill .35s ease, transform .35s ease, -webkit-transform .35s ease;
 }
 
 .btn:hover {
   opacity: .85;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-.btn path {
-  fill: #FFF;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .btn.white {
-  background: #FFF;
   color: #179ad7;
+  background: white;
   border-color: white;
 }
 
@@ -144,18 +168,28 @@ img {
   fill: #179ad7;
 }
 
-.btn svg {
-  width: 20px;
-  margin-right: 1rem;
+.btn.gradient {
+  background: -webkit-gradient(linear, left bottom, left top, from(#179ad7), to(#63c5e6));
+  background: linear-gradient(0deg, #179ad7, #63c5e6);
 }
 
-.btn svg path {
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+.btn.outline {
+  color: white;
+  border-color: white;
+  background: transparent;
 }
 
-.btn:hover {
-  opacity: .85;
+.btn.outline path {
+  fill: white;
+}
+
+.btn.outline:hover {
+  background: white;
+  color: #179ad7;
+}
+
+.btn.outline:hover path {
+  fill: #179ad7;
 }
 
 .row {
@@ -172,7 +206,6 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  min-width: 300px;
 }
 
 .social {
@@ -222,7 +255,7 @@ main {
   background: linear-gradient(0deg, #007ED3, #179ad7, #63c5e6);
   position: relative;
   overflow: hidden;
-  color: #FFF;
+  color: white;
 }
 
 main .container {
@@ -230,7 +263,7 @@ main .container {
 }
 
 main .container .content {
-  padding: 5rem 0;
+  padding: 6rem 0 3rem;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -254,31 +287,21 @@ main .container .buttons .btn {
   transition: all .35s ease;
 }
 
+@media (max-width: 485px) {
+  main .container .buttons .btn {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 main .container .buttons .btn:last-child {
   margin-right: 0;
 }
 
-main .container .buttons .merch {
-  border: 2px solid #FFF;
-  color: #FFF;
-  background: transparent;
-}
-
-main .container .buttons .merch path {
-  fill: #FFF;
-}
-
-main .container .buttons .merch:hover {
-  background: #FFF;
-  color: #179ad7;
-}
-
-main .container .buttons .merch:hover path {
-  fill: #179ad7;
-}
-
 main .social {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 main .preview {
@@ -321,12 +344,60 @@ main .preview.now {
   }
 }
 
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 500px;
+  border: 1px solid #CCC;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card .content {
+  padding: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 2rem;
+  background: rgba(235, 235, 235, 0.75);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: block;
+  border: 1px solid #AAA;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.35);
+          box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.35);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity .35s ease;
+  transition: opacity .35s ease;
+}
+
+.modal:not(.show) {
+  opacity: 0;
+  pointer-events: none;
+}
+
 section {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 
 section svg {
   width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
 }
 
 section svg path {
@@ -374,6 +445,14 @@ footer .container {
       flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  footer .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 footer .container svg path {
   fill: #222;
 }
@@ -382,12 +461,29 @@ footer .container span {
   font-size: 85%;
 }
 
+@media (max-width: 768px) {
+  footer .container span {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .container span {
+    margin-bottom: 1rem;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
 footer .container span .brand {
   font-family: 'Segoe UI SemiBold', -apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',sans-serif;
 }
 
-.index .navbar {
-  padding: 2rem 0;
+.page-index .navbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -395,11 +491,182 @@ footer .container span .brand {
   z-index: 999;
 }
 
-.index .navbar .brand {
+.page-index .navbar .brand {
   background: url("../brand/logo-white.svg") center no-repeat;
 }
 
-.index .navbar ul li a {
+.page-index .navbar ul li a {
   color: white;
+}
+
+.page-index .navbar svg {
+  fill: white;
+}
+
+.page-index .row .col {
+  min-width: 300px;
+}
+
+.page-index section {
+  padding: 3rem 0;
+}
+
+.page-download .files {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.page-download .files .file {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.35rem 1rem;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI SemiBold', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.page-download .files .file::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#63c5e6), to(#179ad7));
+  background: linear-gradient(#63c5e6, #179ad7);
+  border-radius: 99rem;
+  z-index: -1;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.page-download .files .file::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-bottom: -2px;
+  margin-right: 0.5rem;
+  background: url("../brand/logo.svg") center no-repeat;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.page-download .files .file:hover {
+  color: white;
+}
+
+.page-download .files .file:hover::after {
+  opacity: 1;
+}
+
+.page-download .files .file:hover::before {
+  background-image: url("../brand/logo-white.svg");
+}
+
+.page-download img {
+  display: block;
+  margin: 2rem auto;
+  -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.25);
+}
+
+.page-shop .row {
+  margin: 0;
+}
+
+.page-shop .row .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 0;
+}
+
+.page-shop .row .col:first-child, .page-shop .row .col:last-child {
+  max-width: 50px;
+}
+
+.page-shop .row .col button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 0;
+  border-radius: 0;
+}
+
+.page-shop .row .col button:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.page-shop .row .col button svg {
+  margin: 0;
+}
+
+.page-shop .row .col button[disabled] {
+  opacity: .65;
+  pointer-events: none;
+}
+
+.page-shop .row .col input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+  border: 1px solid #179ad7;
+  border-radius: 0;
+}
+
+.page-shop .card .content {
+  padding: 2rem;
+}
+
+.page-shop .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  max-height: 350px;
+}
+
+.page-shop .card .btn-buy {
+  margin-top: 0.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

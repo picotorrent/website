@@ -2,7 +2,9 @@
   <div>
     <nav class="navbar">
       <div class="container">
-        <router-link to="/" target="_self" class="brand">PicoTorrent</router-link>
+        <router-link to="/" target="_self" class="brand">
+          PicoTorrent
+        </router-link>
         <ul>
           <li>
             <router-link to="/download" target="_self" class="nav-link">
