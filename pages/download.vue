@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <h2>PicoTorrent v{{ release.version }}</h2>
+      <h2>PicoTorrent {{ release.version }}</h2>
       <p>Get the latest release, select your desired file:</p>
       <!-- Releases -->
       <h3>Releases</h3>
